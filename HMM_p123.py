@@ -1,6 +1,8 @@
 import math
 import collections
-## part 1
+
+#---------------------------------part 1------------------------------------
+
 def estimate_parameters_without_UNK(path):
     with open(path, "r", encoding="cp437") as f:
         data=f.readlines()
@@ -154,8 +156,8 @@ with open("ES/dev.p1.out", "w",  encoding="cp437", errors='ignore') as g:
 print("ES p1 done")
 
 
+#--------------------------------part 2------------------------------------------
 
-## part 2
 states = ['START','B-positive', 'I-positive', 'B-negative', 'I-negative','B-neutral','I-neutral','O' ,'STOP']
 start = states.copy()
 end = states.copy()
@@ -328,7 +330,7 @@ def viterbi(path, transition, emission, x_set):
     return output
 
 
-
+#------------------------------Part 3------------------------------------------
 
 ## part 3
 # Viterbi algorithm
@@ -480,8 +482,7 @@ def viterbi_5th(path, transition, emission, x_set):
     
     return output
 
-
-# Prediction
+#==========================Prediction================================
 
 # part2
 ES_transition_para = estimate_transition("ES/train")
